@@ -101,15 +101,14 @@
                 intervalTime = parsed * 1000;
                 console.log("Neues Intervall gesetzt:", parsed, "Sekunden");
                 if (intervalId) {
-                    startInterval(); // Neustart mit neuem Wert
+                    startInterval();
                 }
             } else {
                 alert("Ungültige Eingabe.");
             }
         }
     }
-
-    // Menüeinträge
+    
     GM_registerMenuCommand("Start Intervall", startInterval);
     GM_registerMenuCommand("Stop Intervall", stopInterval);
     GM_registerMenuCommand("Intervall ändern", changeIntervalTime);
